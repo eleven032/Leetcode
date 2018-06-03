@@ -1,2 +1,46 @@
 TwoSum:
 
+我想到的第一种为双循环，外for走list中的每一个element，里for走每一个element。
+
+
+每一个外for的element和所有list的elements做运算，如果和符合条件，将其做成pair添加到return list中。
+
+
+时间花费过长，枪毙
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1. 看了答案，牵涉到Map接口
+
+HashMap和Hashtable都实现了Map接口，但决定用哪一个之前先要弄清楚它们之间的分别。主要的区别有：线程安全性，同步(synchronization)，以及速度。
+
+HashMap几乎可以等价于Hashtable
+
+除了HashMap是非synchronized的，并可以接受null     
+
+HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行
+
+2. hashtable
+
+a. 首先创建一个hashtable() object
+Hashtable numbers = new Hashtable();
+
+numbers.put("one", new Integer(1));
+numbers.put("two", new Integer(2));
+numbers.put("three", new Integer(3));
+如此进行实例化
+
+具体方法：http://www.runoob.com/java/java-hashtable-class.html
+
+3. hashmap
+
+a. 创建
+HashMap<String , Double> map = new HashMap<String , Double>();   
+map.put("语文" , 80.0);   
+map.put("数学" , 89.0);   
+map.put("英语" , 78.2);   
+
+具体方法：http://www.runoob.com/java/java-map-interface.html
+
+
+
